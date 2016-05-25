@@ -1,0 +1,28 @@
+{
+  "name": "course",
+  "plural": "courses",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "courseHoles": {
+      "type": "hasMany",
+      "model": "course_hole",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

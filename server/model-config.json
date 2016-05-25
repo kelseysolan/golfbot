@@ -1,0 +1,67 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "team": {
+    "dataSource": "gbdb",
+    "public": true
+  },
+  "player": {
+    "dataSource": "gbdb",
+    "public": true
+  },
+  "course": {
+    "dataSource": "gbdb",
+    "public": true
+  },
+  "event": {
+    "dataSource": "gbdb",
+    "public": true
+  },
+  "round": {
+    "dataSource": "gbdb",
+    "public": true
+  },
+  "course_hole": {
+    "dataSource": "gbdb",
+    "public": true
+  },
+  "penalty": {
+    "dataSource": "gbdb",
+    "public": true
+  },
+  "hole": {
+    "dataSource": "gbdb",
+    "public": true
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "event",
+  "plural": "events",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "course": {
+      "type": "belongsTo",
+      "model": "course",
+      "foreignKey": ""
+    },
+    "rounds": {
+      "type": "hasMany",
+      "model": "round",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

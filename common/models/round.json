@@ -1,0 +1,35 @@
+{
+  "name": "round",
+  "plural": "rounds",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "number": {
+      "type": "string",
+      "required": true,
+      "default": "1"
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "event": {
+      "type": "belongsTo",
+      "model": "event",
+      "foreignKey": ""
+    },
+    "holes": {
+      "type": "hasMany",
+      "model": "hole",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,34 @@
+{
+  "name": "player",
+  "plural": "players",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "holes": {
+      "type": "hasMany",
+      "model": "hole",
+      "foreignKey": ""
+    },
+    "team": {
+      "type": "belongsTo",
+      "model": "team",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

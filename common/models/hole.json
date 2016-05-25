@@ -1,0 +1,54 @@
+{
+  "name": "hole",
+  "plural": "holes",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "score": {
+      "type": "number"
+    },
+    "putts": {
+      "type": "number"
+    },
+    "fairway": {
+      "type": "string"
+    },
+    "gir": {
+      "type": "string"
+    },
+    "updown": {
+      "type": "string"
+    },
+    "sandsave": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "round": {
+      "type": "belongsTo",
+      "model": "round",
+      "foreignKey": ""
+    },
+    "course_hole": {
+      "type": "belongsTo",
+      "model": "course_hole",
+      "foreignKey": ""
+    },
+    "player": {
+      "type": "belongsTo",
+      "model": "player",
+      "foreignKey": ""
+    },
+    "penalties": {
+      "type": "hasAndBelongsToMany",
+      "model": "penalty",
+      "foreignKey": ""
+    }
+   },
+  "acls": [],
+  "methods": {}
+}

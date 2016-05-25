@@ -1,0 +1,29 @@
+{
+  "name": "penalty",
+  "plural": "penalties",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "strokes": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "holes": {
+      "type": "hasAndBelongsToMany",
+      "model": "hole",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
